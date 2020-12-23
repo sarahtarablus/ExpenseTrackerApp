@@ -1,0 +1,30 @@
+.container{
+  display: flex;
+  justify-content: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container-2{
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 100px;
+}
+
+#expense-form{
+  
+  flex-basis: 50%;
+  margin: 30px;
+  
+}
+
+
+
+
+
+
+.input{
+   height: 30px;
+   width: 170px;
+   margin: 10px;
+}

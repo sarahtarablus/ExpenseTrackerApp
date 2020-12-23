@@ -15,9 +15,7 @@ function addExpense(e){
   e.preventDefault();
   let dateFormat = '/^(0?[1-9]|[12][0-9]|3[01])[\/](0?[0-9]1[012])[\/](d{4})$/';
   if(description.value === '' || date.value === '' && date.value !== dateFormat || amount.value === '' || where.value === ''){
-    
-    alert('Please fill in all the fields')
-   
+  alert('Please fill in all the fields')
   }else{
     const row = table.insertRow();
     const cell0 = row.insertCell(0);
@@ -48,13 +46,6 @@ function addExpense(e){
   where.value = '';
 }
 
-function checkDateFormat(){
-  
-    console.log('wrong format')
-  }else{
-    console.log('OK')
-  }
-}
 
 
 function deleteExpense(e){

@@ -6,16 +6,18 @@ const addBtn = document.getElementById('btnAddExpense');
 const form = document.getElementById('expense-form');
 const table = document.getElementById('table');
 
-let dateForma = 
+
 
 form.addEventListener('submit', addExpense);
 table.addEventListener('click', deleteExpense);
 
 function addExpense(e){
   e.preventDefault();
-
-  if(description.value === '' || date.value === '' && !== dateformat || amount.value === '' || where.value === ''){
+  let dateFormat = '/^(0?[1-9]|[12][0-9]|3[01])[\/](0?[0-9]1[012])[\/](d{4})$/';
+  if(description.value === '' || date.value === '' && date.value !== dateFormat || amount.value === '' || where.value === ''){
+    
     alert('Please fill in all the fields')
+   
   }else{
     const row = table.insertRow();
     const cell0 = row.insertCell(0);
@@ -44,8 +46,16 @@ function addExpense(e){
   date.value = '';
   amount.value = '';
   where.value = '';
- 
 }
+
+function checkDateFormat(){
+  
+    console.log('wrong format')
+  }else{
+    console.log('OK')
+  }
+}
+
 
 function deleteExpense(e){
   if(e.target.classList.contains('delBtn')){

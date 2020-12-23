@@ -12,28 +12,29 @@
   </div>
   <div class="container-2">
     <form id="expense-form">
-      <label for="date" class="label">Date:</label>
-      <input type="text" class="input" id="date" placeholder="mm/dd/yyyy">
       <label for="name" class="label">Name:</label>
       <input type="text" class="input" id="name" placeholder="What for?">
+      <label for="date" class="label">Date:</label>
+      <input type="text" class="input" id="date" placeholder="mm/dd/yyyy">
+      <br><br>
       <label for="amount" class="label">Amount:</label>
       <input type="number" class="input" id="amount" placeholder="$">
       <label for="location" class="label">Location:</label>
-      <input type="text" class="input" id="location" placeholder="Where?">
-      <button id="addExpense">Add</button>
+      <input type="text" class="input" id="location" placeholder="Where?"><br><br>
+      <button id="btnAddExpense">Add Expense</button>
     </form>
   </div>
   <div class="container-3">
-    <table>
-      <thead>
-        <th>
-          <td></td>
-        </th>
-        <tr>
-          <td></td>
+    <table id="table">
+      <thead id="thead" style="display:none">
+        <tr id="tr0">
+         <th id="tName">Name</th>
+         <th id="tDate">Date</th>
+         <th id="tAmount">Amount</th>
+         <th id="tLocation">Location</th>
         </tr>
       </thead>
-    </table>
+    </table>s
   </div>
   <script src="app.js"></script>
 </body>

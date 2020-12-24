@@ -5,17 +5,16 @@ const where = document.getElementById('location');
 const addBtn = document.getElementById('btnAddExpense');
 const form = document.getElementById('expense-form');
 const table = document.getElementById('table');
-
-
+const container2 = document.querySelector('.container-2');
+const message = document.getElementById('message');
 
 form.addEventListener('submit', addExpense);
 table.addEventListener('click', deleteExpense);
 
 function addExpense(e){
   e.preventDefault();
-  let dateFormat = '/^(0?[1-9]|[12][0-9]|3[01])[\/](0?[0-9]1[012])[\/](d{4})$/';
-  if(description.value === '' || date.value === '' && date.value !== dateFormat || amount.value === '' || where.value === ''){
-  alert('Please fill in all the fields')
+  if(description.value === '' || date.value === '' || amount.value === '' || where.value === ''){
+    alert('Please fill in all the fields');
   }else{
     const row = table.insertRow();
     const cell0 = row.insertCell(0);
@@ -33,20 +32,13 @@ function addExpense(e){
     delBtn.innerHTML = 'X'
     cell4.appendChild(delBtn);
 
-    document.getElementById('thead').style.display = 'block';
-
-    cell0.style.padding = '80px;'
-    cell1.style.padding = '80px;'
-    cell2.style.padding = '80px;'
-    cell3.style.padding = '80px;'
+    table.style.display = 'block';  
   }
-  description.value = '';
-  date.value = '';
-  amount.value = '';
-  where.value = '';
+   description.value = '';
+   date.value = '';
+   amount.value = '';
+   where.value = '';
 }
-
-
 
 function deleteExpense(e){
   if(e.target.classList.contains('delBtn')){

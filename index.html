@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ExpenseTrackerApp</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1 id="title">Expense Tracker</h1>
-  </div>
-  <div class="container-2">
-    <form id="expense-form">
-      <label for="name" class="label">Name:</label>
-      <input type="text" class="input" id="name" placeholder="What for?">
-      <label for="date" class="label">Date:</label>
-      <input type="text" class="input" id="date" placeholder="mm/dd/yyyy">
-      <br><br>
-      <label for="amount" class="label">Amount:</label>
-      <input type="number" class="input" id="amount" placeholder="$">
-      <label for="location" class="label">Location:</label>
-      <input type="text" class="input" id="location" placeholder="Where?"><br><br>
-      <button id="btnAddExpense">Add Expense</button>
-    </form>
-  </div>
-  <div class="container-3">
-    <table id="table">
-      <thead id="thead" style="display:none">
-        <tr id="tr0">
-         <th id="tName">Name</th>
-         <th id="tDate">Date</th>
-         <th id="tAmount">Amount</th>
-         <th id="tLocation">Location</th>
-        </tr>
-      </thead>
-    </table>s
-  </div>
-  <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExpenseTrackerApp</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Expense Tracker</h1>
+    </div>
+    <div class="container-2">
+      <form id="expense-form">
+        <label for="name" class="label">Name:</label>
+        <input type="text" class="input" id="name" placeholder="What for?" />
+        <label for="date" class="label">Date:</label>
+        <input
+          type="date"
+          class="input"
+          id="date"
+          placeholder="mm/dd/yyyy"
+          value=""
+          min="1997-01-01"
+          max="2040-12-31"
+        />
+        <br /><br />
+        <label for="amount" class="label">Amount:</label>
+        <input type="number" class="input" id="amount" placeholder="$" />
+        <label for="location" class="label">Location:</label>
+        <input
+          type="text"
+          class="input"
+          id="location"
+          placeholder="Where?"
+        /><br /><br />
+        <button id="btnAddExpense">Add Expense</button>
+      </form>
+    </div>
+    <div class="container-3">
+      <table id="table" style="display: none">
+        <thead id="thead">
+          <tr class="tr">
+            <th id="tName">Name</th>
+            <th id="tDate">Date</th>
+            <th id="tAmount">Amount</th>
+            <th id="tLocation">Location</th>
+            <th id="tx"></th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
